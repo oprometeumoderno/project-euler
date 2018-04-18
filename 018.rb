@@ -1,4 +1,4 @@
-File.open('18.txt', 'r') do |file|
+File.open('input/018.txt', 'r') do |file|
   lines = file.read.split("\n")
   triangle = lines.map{|line| line = line.split(' ').map{|x| x.to_i}}.reverse
 

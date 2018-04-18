@@ -1,4 +1,4 @@
-File.open('11.txt', 'r') do |file|
+File.open('input/011.txt', 'r') do |file|
   grid = file.read.split("\n").map{|line| line.split(' ').map{|x| x.to_i}}
 
   width = grid.first.size
