@@ -34,4 +34,3 @@ for i in range(1, LIMIT):
         result += i
 
 print(result)
-#print(get_sum_divisors(64))
