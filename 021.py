@@ -1,4 +1,6 @@
 from math import sqrt, floor
+
+
 def sum_of_divisors(n):
     if n == 1:
         return 1
@@ -6,7 +8,7 @@ def sum_of_divisors(n):
     root = sqrt(n)
     for i in range(2, floor(root)):
         if n % i == 0:
-            divisors.append(int(n//i))
+            divisors.append(int(n // i))
             divisors.append(i)
     if root == floor(root):
         divisors.append(floor(root))

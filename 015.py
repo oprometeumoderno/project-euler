@@ -9,6 +9,6 @@ import operator
 # this could be further reduced using divisions in both sides
 
 numerator = functools.reduce(operator.mul, list(range(21, 41)))
-denominator = functools.reduce(operator.mul, list(range(1,21)))
+denominator = functools.reduce(operator.mul, list(range(1, 21)))
 
-print(int(numerator/denominator))
+print(int(numerator / denominator))
