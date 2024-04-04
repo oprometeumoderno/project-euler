@@ -14,7 +14,7 @@ for a in range(-1000, 1001):
     for prime_number in b:
         n = 0
         length = 0
-        while n**2 + a*n + prime_number in primes:
+        while n**2 + a * n + prime_number in primes:
             length += 1
             n += 1
         if length > max_length:

@@ -6,4 +6,4 @@ I have a bachelor degree in computer science and, back when I was a student, I s
 
 # Requirements
 
- - Python (I use python 3.10.9) 
+ - Python (I use python 3.10.9)

@@ -1,10 +1,12 @@
 from prime import PrimeIterator
 
+
 def get_rotations(n):
     result = []
     for i in range(len(str(n))):
         result.append(int(f"{str(n)[i:]}{str(n)[0:i]}"))
     return set(result) - {n}
+
 
 p = PrimeIterator()
 primes = set()
@@ -15,7 +17,9 @@ while len(str(current_prime)) < 2:
 result = 4
 
 while current_prime < 1000000:
-    if not set(['2', '4', '6', '8', '0']).intersection(set([x for x in str(current_prime)])):
+    if not set(["2", "4", "6", "8", "0"]).intersection(
+        set([x for x in str(current_prime)])
+    ):
         primes.add(current_prime)
     current_prime = next(p)
 
