@@ -1,3 +1,7 @@
+import math
+import functools
+import operator
+
 class PrimeIterator:
     def __init__(self):
 
@@ -31,7 +35,6 @@ class PrimeIterator:
             self.n += 2
             return self.primes[-1]
 
-
 def prime_division(n):
     p = PrimeIterator()
     result = []
@@ -44,3 +47,13 @@ def prime_division(n):
                 n = n // current_prime
                 result[-1] = (current_prime, result[-1][1] + 1)
     return result
+
+def gcd(a, b):
+    divs_a = dict(prime_division(a))
+    divs_b = dict(prime_division(b))
+
+    gcd = {}
+    for divisor in divs_a:
+        if divisor in divs_b:
+            gcd[divisor] = min([divs_a[divisor], divs_b[divisor]])
+    return functools.reduce(operator.mul, [x**gcd[x] for x in gcd])
