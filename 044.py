@@ -11,6 +11,6 @@ while not found:
         p_j = pentagon - p_k
         if p_j in pentagon_numbers and p_k - p_j in pentagon_numbers:
             print(f"{p_k - p_j}")
-            break
+            found = True
     pentagon_numbers.add(pentagon)
     i += 1
