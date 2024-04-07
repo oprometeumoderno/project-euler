@@ -1,53 +1,55 @@
-uni = [
-    "",
-    "one",
-    "two",
-    "three",
-    "four",
-    "five",
-    "six",
-    "seven",
-    "eight",
-    "nine",
-    "ten",
-    "eleven",
-    "twelve",
-    "thirteen",
-    "fourteen",
-    "fifteen",
-    "sixteen",
-    "seventeen",
-    "eighteen",
-    "nineteen",
-]
+def solution017():
 
-dez = [
-    "",
-    "",
-    "twenty",
-    "thirty",
-    "forty",
-    "fifty",
-    "sixty",
-    "seventy",
-    "eighty",
-    "ninety",
-]
+    uni = [
+        "",
+        "one",
+        "two",
+        "three",
+        "four",
+        "five",
+        "six",
+        "seven",
+        "eight",
+        "nine",
+        "ten",
+        "eleven",
+        "twelve",
+        "thirteen",
+        "fourteen",
+        "fifteen",
+        "sixteen",
+        "seventeen",
+        "eighteen",
+        "nineteen",
+    ]
 
-result = 0
-hsize = len("hundred")
-for i in range(1, 1000):
-    result += len(uni[int(i // 100)])
-    if i >= 100:
-        result += hsize
+    dez = [
+        "",
+        "",
+        "twenty",
+        "thirty",
+        "forty",
+        "fifty",
+        "sixty",
+        "seventy",
+        "eighty",
+        "ninety",
+    ]
 
-    if i % 100 > 0:
+    result = 0
+    hsize = len("hundred")
+    for i in range(1, 1000):
+        result += len(uni[int(i // 100)])
         if i >= 100:
-            result += len("and")
-        if i % 100 < 20:
-            result += len(uni[i % 100])
-        else:
-            result += len(dez[int((i % 100) // 10)]) + len(uni[(i % 100) % 10])
+            result += hsize
 
-result += len("one") + len("thousand")
-print(result)
+        if i % 100 > 0:
+            if i >= 100:
+                result += len("and")
+            if i % 100 < 20:
+                result += len(uni[i % 100])
+            else:
+                result += len(dez[int((i % 100) // 10)]) + len(uni[(i % 100) % 10])
+
+    result += len("one") + len("thousand")
+    return result

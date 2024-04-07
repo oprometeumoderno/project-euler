@@ -15,13 +15,14 @@ def collatz_length(n):
     return length
 
 
-longest = 0
-longest_chain = 0
-for i in range(1, 1000000 + 1):
-    length = collatz_length(i)
-    COLLATZ_CACHE[i] = length
-    if length > longest_chain:
-        longest = i
-        longest_chain = length
+def solution014():
+    longest = 0
+    longest_chain = 0
+    for i in range(1, 1000000 + 1):
+        length = collatz_length(i)
+        COLLATZ_CACHE[i] = length
+        if length > longest_chain:
+            longest = i
+            longest_chain = length
 
-print(longest)
+    return longest

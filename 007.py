@@ -1,5 +1,7 @@
 from prime import PrimeIterator
 
-p = PrimeIterator()
 
-print([next(p) for _ in range(1, 10002)][-1])
+def solution007():
+    p = PrimeIterator()
+
+    return [next(p) for _ in range(1, 10002)][-1]

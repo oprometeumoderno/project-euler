@@ -20,12 +20,13 @@ def get_cycle_length(d):
             return len(digits) - digits[-10:].index(digits[-10:]) - 10
 
 
-max_d = None
-max_length = 0
-for d in range(7, 999):
-    cycle_length = get_cycle_length(d)
-    if cycle_length > max_length:
-        max_d = d
-        max_length = cycle_length
+def solution026():
+    max_d = None
+    max_length = 0
+    for d in range(7, 999):
+        cycle_length = get_cycle_length(d)
+        if cycle_length > max_length:
+            max_d = d
+            max_length = cycle_length
 
-print(max_d)
+    return max_d

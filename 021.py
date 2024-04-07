@@ -15,10 +15,11 @@ def sum_of_divisors(n):
     return sum(divisors)
 
 
-result = 0
-for i in range(1, 10000):
-    sod = sum_of_divisors(i)
-    if sum_of_divisors(sod) == i and i != sod:
-        result += i
+def solution021():
+    result = 0
+    for i in range(1, 10000):
+        sod = sum_of_divisors(i)
+        if sum_of_divisors(sod) == i and i != sod:
+            result += i
 
-print(result)
+    return result

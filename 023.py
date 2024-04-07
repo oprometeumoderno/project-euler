@@ -18,19 +18,20 @@ def is_abundant(n):
         return False
 
 
-abundant_numbers = set()
-for i in range(1, 28123):
-    if is_abundant(i):
-        abundant_numbers.add(i)
+def solution023():
+    abundant_numbers = set()
+    for i in range(1, 28123):
+        if is_abundant(i):
+            abundant_numbers.add(i)
 
-result = 0
-for i in range(1, LIMIT):
-    can_be_sum = False
-    for abundant_num in abundant_numbers:
-        if (i - abundant_num) in abundant_numbers:
-            can_be_sum = True
-            break
-    if not can_be_sum:
-        result += i
+    result = 0
+    for i in range(1, LIMIT):
+        can_be_sum = False
+        for abundant_num in abundant_numbers:
+            if (i - abundant_num) in abundant_numbers:
+                can_be_sum = True
+                break
+        if not can_be_sum:
+            result += i
 
-print(result)
+    return result

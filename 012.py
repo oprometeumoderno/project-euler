@@ -15,13 +15,14 @@ def number_of_factors(n):
     return result
 
 
-found = False
-i = 2
-while not found:
-    _sum = (i * (i + 1)) / 2
-    if number_of_factors(_sum) > 500:
-        found = True
-    else:
-        i += 1
+def solution012():
+    found = False
+    i = 2
+    while not found:
+        _sum = (i * (i + 1)) / 2
+        if number_of_factors(_sum) > 500:
+            found = True
+        else:
+            i += 1
 
-print(int(_sum))
+    return int(_sum)

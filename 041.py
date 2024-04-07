@@ -1,7 +1,7 @@
 from itertools import permutations
 from math import floor, sqrt
 
-
+# TODO: move this test to the prime package
 def is_prime(n):
     for i in range(3, floor(sqrt(n))):
         if n % i == 0:
@@ -22,10 +22,11 @@ def get_all_pandigital_permutations(max_n):
     return all_permutations
 
 
-max_prime = 0
-for digits in range(4, 10):
-    for permutation in get_all_pandigital_permutations(digits):
-        if is_prime(int(permutation)) and int(permutation) > max_prime:
-            max_prime = int(permutation)
+def solution041():
+    max_prime = 0
+    for digits in range(4, 10):
+        for permutation in get_all_pandigital_permutations(digits):
+            if is_prime(int(permutation)) and int(permutation) > max_prime:
+                max_prime = int(permutation)
 
-print(max_prime)
+    return max_prime

@@ -7,8 +7,8 @@ import operator
 # = 40!/(20! * 20!)
 # = (40 * 39 * 38 * ... * 21) / 20!
 # this could be further reduced using divisions in both sides
+def solution015():
+    numerator = functools.reduce(operator.mul, list(range(21, 41)))
+    denominator = functools.reduce(operator.mul, list(range(1, 21)))
 
-numerator = functools.reduce(operator.mul, list(range(21, 41)))
-denominator = functools.reduce(operator.mul, list(range(1, 21)))
-
-print(int(numerator / denominator))
+    return int(numerator / denominator)
