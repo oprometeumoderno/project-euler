@@ -4,7 +4,7 @@ import importlib
 
 # print(getattr(module, f"solution{problem_id}")())
 
-ANSWERS = {"001": 233168}
+ANSWERS = {"001": 233168, "002": 4613732}
 
 
 class SolutionTest(unittest.TestCase):
@@ -20,6 +20,10 @@ class SolutionTest(unittest.TestCase):
 
     def testProblem001(self):
         problem_id = "001"
+        self.assertEqual(self.answers[problem_id], self.get_answer(problem_id))
+
+    def testProblem002(self):
+        problem_id = "002"
         self.assertEqual(self.answers[problem_id], self.get_answer(problem_id))
 
 
