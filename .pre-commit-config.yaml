@@ -12,3 +12,11 @@ repos:
    rev: 22.10.0
    hooks:
    -   id: black
+- repo: local
+  hooks:
+  -    id: tests
+       name: run tests
+       entry: python -m unittest test
+       language: python
+       types: [python]
+       stages: [commit]
