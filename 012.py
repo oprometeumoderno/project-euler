@@ -20,7 +20,7 @@ def solution012():
     i = 2
     while not found:
         _sum = (i * (i + 1)) / 2
-        if number_of_factors(_sum) > 500:
+        if _sum % 2 == 0 and number_of_factors(_sum) > 500:
             found = True
         else:
             i += 1
