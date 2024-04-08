@@ -1,17 +1,16 @@
 import unittest
 import importlib
 
+from answers import get_answers
 
-# print(getattr(module, f"solution{problem_id}")())
-
-ANSWERS = {"001": 233168, "002": 4613732}
+ANSWERS = get_answers()
 
 
 class SolutionTest(unittest.TestCase):
     def setUp(self):
         self.solution_modules = dict()
         self.answers = ANSWERS
-        for problem in range(1, 4):
+        for problem in range(1, len(self.answers) + 1):
             problem_id = "{0:03n}".format(problem)
             self.solution_modules[problem_id] = importlib.import_module(problem_id)
 
@@ -24,6 +23,50 @@ class SolutionTest(unittest.TestCase):
 
     def testProblem002(self):
         problem_id = "002"
+        self.assertEqual(self.answers[problem_id], self.get_answer(problem_id))
+
+    def testProblem003(self):
+        problem_id = "003"
+        self.assertEqual(self.answers[problem_id], self.get_answer(problem_id))
+
+    def testProblem004(self):
+        problem_id = "004"
+        self.assertEqual(self.answers[problem_id], self.get_answer(problem_id))
+
+    def testProblem005(self):
+        problem_id = "005"
+        self.assertEqual(self.answers[problem_id], self.get_answer(problem_id))
+
+    def testProblem006(self):
+        problem_id = "006"
+        self.assertEqual(self.answers[problem_id], self.get_answer(problem_id))
+
+    def testProblem007(self):
+        problem_id = "007"
+        self.assertEqual(self.answers[problem_id], self.get_answer(problem_id))
+
+    def testProblem008(self):
+        problem_id = "008"
+        self.assertEqual(self.answers[problem_id], self.get_answer(problem_id))
+
+    def testProblem009(self):
+        problem_id = "009"
+        self.assertEqual(self.answers[problem_id], self.get_answer(problem_id))
+
+    def testProblem010(self):
+        problem_id = "010"
+        self.assertEqual(self.answers[problem_id], self.get_answer(problem_id))
+
+    def testProblem011(self):
+        problem_id = "011"
+        self.assertEqual(self.answers[problem_id], self.get_answer(problem_id))
+
+    def testProblem012(self):
+        problem_id = "012"
+        self.assertEqual(self.answers[problem_id], self.get_answer(problem_id))
+
+    def testProblem013(self):
+        problem_id = "013"
         self.assertEqual(self.answers[problem_id], self.get_answer(problem_id))
 
 
