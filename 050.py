@@ -9,10 +9,11 @@ def generate_primes_sieve(max_prime):
     sieve[0] = False
 
     for n in range(2, max_prime // 2 + 1):
-        m = 2
-        while (n * m) <= len(sieve):
-            sieve[m * n - 1] = False
-            m += 1
+        if sieve[n - 1]:
+            m = 2
+            while (n * m) <= len(sieve):
+                sieve[m * n - 1] = False
+                m += 1
 
     result = []
 
