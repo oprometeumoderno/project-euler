@@ -10,8 +10,7 @@ class SolutionTest(unittest.TestCase):
     def setUp(self):
         self.solution_modules = dict()
         self.answers = ANSWERS
-        for problem in range(1, len(self.answers) + 1):
-            problem_id = "{0:03n}".format(problem)
+        for problem_id in self.answers:
             self.solution_modules[problem_id] = importlib.import_module(problem_id)
 
     def get_answer(self, problem_id):
@@ -67,6 +66,10 @@ class SolutionTest(unittest.TestCase):
 
     def testProblem013(self):
         problem_id = "013"
+        self.assertEqual(self.answers[problem_id], self.get_answer(problem_id))
+
+    def testProblem038(self):
+        problem_id = "038"
         self.assertEqual(self.answers[problem_id], self.get_answer(problem_id))
 
 
