@@ -68,6 +68,46 @@ class SolutionTest(unittest.TestCase):
         problem_id = "013"
         self.assertEqual(self.answers[problem_id], self.get_answer(problem_id))
 
+    def testProblem014(self):
+        problem_id = "014"
+        self.assertEqual(self.answers[problem_id], self.get_answer(problem_id))
+
+    def testProblem015(self):
+        problem_id = "015"
+        self.assertEqual(self.answers[problem_id], self.get_answer(problem_id))
+
+    def testProblem016(self):
+        problem_id = "016"
+        self.assertEqual(self.answers[problem_id], self.get_answer(problem_id))
+
+    def testProblem017(self):
+        problem_id = "017"
+        self.assertEqual(self.answers[problem_id], self.get_answer(problem_id))
+
+    def testProblem018(self):
+        problem_id = "018"
+        self.assertEqual(self.answers[problem_id], self.get_answer(problem_id))
+
+    def testProblem019(self):
+        problem_id = "019"
+        self.assertEqual(self.answers[problem_id], self.get_answer(problem_id))
+
+    def testProblem020(self):
+        problem_id = "020"
+        self.assertEqual(self.answers[problem_id], self.get_answer(problem_id))
+
+    def testProblem021(self):
+        problem_id = "021"
+        self.assertEqual(self.answers[problem_id], self.get_answer(problem_id))
+
+    def testProblem022(self):
+        problem_id = "022"
+        self.assertEqual(self.answers[problem_id], self.get_answer(problem_id))
+
+    def testProblem023(self):
+        problem_id = "023"
+        self.assertEqual(self.answers[problem_id], self.get_answer(problem_id))
+
     def testProblem038(self):
         problem_id = "038"
         self.assertEqual(self.answers[problem_id], self.get_answer(problem_id))
