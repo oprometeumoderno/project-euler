@@ -17,10 +17,7 @@ def generate_primes_sieve(max_prime):
 
     result = []
 
-    for i in range(len(sieve)):
-        if sieve[i]:
-            result.append(i + 1)
-    return result
+    return [x + 1 for x in range(len(sieve)) if sieve[x]]
 
 
 def solution050():
