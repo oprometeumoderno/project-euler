@@ -1,15 +1,10 @@
-from prime import PrimeIterator
+from prime import sieve
 
 
 def solution027():
     max_length = 0
     max_length_coeff = (None, None)
-    primes = set()
-    p = PrimeIterator()
-    current_prime = next(p)
-    while current_prime < 1000**2 + 1000:
-        primes.add(current_prime)
-        current_prime = next(p)
+    primes = set(sieve(1000**2 + 1000))
 
     for a in range(-1000, 1001):
         b = [x for x in primes if x < 1000]
@@ -23,4 +18,4 @@ def solution027():
                 max_length = length
                 max_length_coeff = (a, prime_number)
 
-    return f"{max_length_coeff[0] * max_length_coeff[1]}"
+    return max_length_coeff[0] * max_length_coeff[1]

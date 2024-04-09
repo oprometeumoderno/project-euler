@@ -37,6 +37,19 @@ class PrimeIterator:
             return self.primes[-1]
 
 
+def sieve(max_prime):
+    sieve = [True] * max_prime
+    sieve[0] = False
+
+    for n in range(2, max_prime // 2 + 1):
+        if sieve[n - 1]:
+            m = 2
+            while (n * m) <= len(sieve):
+                sieve[m * n - 1] = False
+                m += 1
+    return [i + 1 for i in range(len(sieve)) if sieve[i]]
+
+
 def prime_division(n):
     p = PrimeIterator()
     result = []

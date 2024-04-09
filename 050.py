@@ -1,27 +1,8 @@
-from prime import PrimeIterator
-
-p = PrimeIterator()
-
-
-# TODO: move this somewhere else
-def generate_primes_sieve(max_prime):
-    sieve = [True] * max_prime
-    sieve[0] = False
-
-    for n in range(2, max_prime // 2 + 1):
-        if sieve[n - 1]:
-            m = 2
-            while (n * m) <= len(sieve):
-                sieve[m * n - 1] = False
-                m += 1
-
-    result = []
-
-    return [x + 1 for x in range(len(sieve)) if sieve[x]]
+from prime import sieve
 
 
 def solution050():
-    primes = generate_primes_sieve(1000000)
+    primes = sieve(1000000)
     prime_set = set(primes)
     max_length = 0
     max_sum = 0
