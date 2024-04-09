@@ -1,12 +1,5 @@
 from itertools import permutations
-from math import floor, sqrt
-
-# TODO: move this test to the prime package
-def is_prime(n):
-    for i in range(3, floor(sqrt(n))):
-        if n % i == 0:
-            return False
-    return True
+from prime import is_prime
 
 
 def get_all_pandigital_permutations(max_n):

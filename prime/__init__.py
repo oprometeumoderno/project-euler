@@ -51,6 +51,13 @@ def prime_division(n):
     return result
 
 
+def is_prime(n):
+    for i in range(3, math.floor(math.isqrt(n))):
+        if n % i == 0:
+            return False
+    return True
+
+
 def gcd(a, b):
     divs_a = dict(prime_division(a))
     divs_b = dict(prime_division(b))
