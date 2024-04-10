@@ -1,4 +1,4 @@
-from prime import PrimeIterator
+from prime import sieve
 
 
 def get_rotations(n):
@@ -9,20 +9,17 @@ def get_rotations(n):
 
 
 def solution035():
-    p = PrimeIterator()
+
+    all_primes = sieve(1000000)
     primes = set()
-    current_prime = next(p)
-    while len(str(current_prime)) < 2:
-        current_prime = next(p)
 
-    result = 4
+    result = 1
 
-    while current_prime < 1000000:
+    for prime in all_primes:
         if not set(["2", "4", "6", "8", "0"]).intersection(
-            set([x for x in str(current_prime)])
+            set([x for x in str(prime)])
         ):
-            primes.add(current_prime)
-        current_prime = next(p)
+            primes.add(prime)
 
     while primes:
         current_prime = primes.pop()

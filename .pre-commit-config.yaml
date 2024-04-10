@@ -16,7 +16,9 @@ repos:
   hooks:
   -    id: tests
        name: run tests
-       entry: python -m unittest test
+       entry: python -m unittest
+       pass_filenames: false
+       args: ["discover"]
        language: python
        types: [python]
        stages: [commit]
