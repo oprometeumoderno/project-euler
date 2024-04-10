@@ -17,4 +17,4 @@ def nth_permutation(digits, target):
 
 
 def solution024():
-    return nth_permutation([x for x in range(0, 10)], TARGET)
+    return int(nth_permutation([x for x in range(0, 10)], TARGET))
