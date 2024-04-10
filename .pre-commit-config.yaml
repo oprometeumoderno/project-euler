@@ -18,7 +18,7 @@ repos:
        name: run tests
        entry: python -m unittest
        pass_filenames: false
-       args: ["discover"]
+       args: ["test"]
        language: python
        types: [python]
        stages: [commit]
