@@ -9,16 +9,6 @@ class PrimeIterator:
         self.primes = []
         self.n = 2
 
-    def newton_root(self, n):
-        tolerance = 0.5
-        x = n / 2
-        while True:
-            root = 0.5 * (x + (n / x))
-            if abs(root - x) < tolerance:
-                break
-            x = root
-        return root
-
     def __next__(self):
         if not self.primes:
             self.primes.append(self.n)
@@ -26,7 +16,7 @@ class PrimeIterator:
             return self.primes[-1]
         else:
             i = 0
-            while self.primes[i] < self.newton_root(self.n):
+            while self.primes[i] <= math.isqrt(self.n):
                 if self.n % self.primes[i] == 0:
                     i = 0
                     self.n += 2
