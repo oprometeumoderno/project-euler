@@ -22,3 +22,5 @@ repos:
        language: python
        types: [python]
        stages: [commit]
+       additional_dependencies:
+          - numba
