@@ -1,6 +1,3 @@
-from itertools import permutations
-
-CHAIN_CACHE = {1: False, 89: True}
 CHAIN_CACHE = [False] * 1000
 CHAIN_CACHE[1] = 0
 CHAIN_CACHE[89] = 1
