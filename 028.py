@@ -1,6 +1,3 @@
-from math import ceil
-
-
 def solution028():
     result = 1
     curr = 1
