@@ -1,12 +1,12 @@
 # Introduction
 
-[Project Euler](https://projecteuler.net) is an online platform that contains around one thousand problems intended to be solved with computer programs. The problems present an interesting intersection between mathematics and algorithms, providing challenges that span various domains in both fields. The platform also offers a collaborative forum where enthusiasts from all around the world share their thoughts and solutions (a discussion for a particular problem becomes available once the problem is solved).
+[Project Euler](https://projecteuler.net) is an online platform that contains around one thousand problems intended to be solved with coding. The problems present an interesting intersection between mathematics and algorithms, providing challenges that span various domains in both fields. The platform also offers a collaborative forum where enthusiasts from all around the world share their thoughts and solutions (the discussion for a particular problem becomes available once the problem is solved).
 
-I have a bachelor degree in computer science and, back when I was a student, I started solving these problems but they quickly progress into something that requires more mathematical knowledge than I had back then. Now that I am pursuing a degree in math, I re-discovered this challenge and once more started to work on the problems. I'll try to solve them all, but I am not sure how far I'll get.
+I have a bachelor degree in computer science and, back when I was a student, I started solving these problems but they quickly progress into something that requires more mathematical knowledge than I had back then. Now that I am pursuing a degree in math, I re-discovered this challenge and once more started to work on the problems. I'll try to solve them all, but I am not sure how far I'll get. Project Euler's about page states that, in order to be in the top 1%, one must solve more than 115 problems and that's my goal for the moment.
 
 # How to run it:
 
- The only requirement is Python (I use python 3.10.9), but don't forget to run
+ It only needs Python (I use python 3.10.9), but don't forget to run
  `pip install -r requirements.txt` to install all requirements and
  `pre-commit install` to initialize the pre-commit hooks.
 
@@ -33,4 +33,4 @@ Problem ID    Runtime (seconds)
        050               0.6244
 ```
 
-I'll try to solve at least the first 115 problems (thus getting into the 1% of PE's problems solvers), but it will be a long journey. I hope you can learn something from this repo.
+I hope you can learn anything from my solutions. Happy coding!
