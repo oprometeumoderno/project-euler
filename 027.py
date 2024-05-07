@@ -5,9 +5,8 @@ def solution027():
     max_length = 0
     max_length_coeff = (None, None)
     primes = set(sieve(1000**2 + 1000))
-
+    b = [x for x in primes if x < 1000]
     for a in range(-1000, 1001):
-        b = [x for x in primes if x < 1000]
         for prime_number in b:
             n = 0
             length = 0
